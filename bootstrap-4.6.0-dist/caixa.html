@@ -11,12 +11,20 @@
     <title>Menu</title>
   </head>
   <body>
-  <form>
-      <legend>Login do usuario</legend>
-      <input type="text"> 
-      <legend>Senha do usuário</legend>
-      <input type="password">
-  </form>
+    <header class="p-2">
+      <form>
+        <div class="form-group row">
+          <label for="N_mesa" class="col-2">Número da mesa</label>
+          <div class="col-9">
+           <input id="N_mesa" type="text" class="form-control form-control-plaintext" readonly>
+          </div>
+          <div class=" align-items-center">
+            <button type="button" class="close col-1" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button></div>
+        </div>
+      </form>
+    </header>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
