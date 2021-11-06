@@ -7,20 +7,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="estilo.css">
     <title>Caixa</title>
   </head>
   <body>
     <header class="p-2">
-      <form>
-        <div class="form-group row">
-          <label for="N_mesa" class="col-2">Número da mesa</label>
-          <div class="col-9">
-           <input id="N_mesa" type="text" class="form-control form-control-plaintext">
+      <form> 
+        <div class="form-group row m-1 align-middle">
+          <label for="N_mesa" class="col-3">Número da mesa:</label>
+          <div class="col-7">
+           <input id="N_mesa" type="text" class="form-control m-1"  >  <!-- form-control-plaintext foi tirado-->
           </div>
-          <div class=" align-items-center">
-            <button type="button" class="close col-1" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <div class=" texte-center align-items-center col-2">
+            <button class="btn btn-dark btn-md m-1" id="bt_carrinho" >Pesquisar Mesa</button>
           </button></div>
         </div>
       </form>
