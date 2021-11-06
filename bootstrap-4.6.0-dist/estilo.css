@@ -15,7 +15,11 @@ hr{
 header{
     background-color:rgba(255, 184, 53, 0.993);
 }
-.navbar{
+footer{
+    background-color:rgba(255, 184, 53, 0.993);
+}
+
+/*.navbar{
     background-color: rgba(255, 184, 53, 0.993);
     height: 100vh;
 }
@@ -26,4 +30,4 @@ header{
 .nav-link:focus,
 .nav-link:hover{
     background-color:rgba(255, 222, 161, 0.993)
-}
+}*/

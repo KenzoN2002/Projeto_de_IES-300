@@ -12,21 +12,21 @@
   </head>
   <body >
     <header class="p-2">
-      <form>
-        <div class="form-group row">
-          <label for="N_mesa" class="col-2">Número da mesa</label>
+      <form> 
+        <div class="form-group row m-1 align-middle">
+          <label for="N_mesa" class="col-3">Número da mesa:</label>
           <div class="col-9">
-           <input id="N_mesa" type="text" class="form-control form-control-plaintext" readonly>
+           <input id="N_mesa" type="text" class="form-control m-1"  >  <!-- form-control-plaintext foi tirado-->
           </div>
-          <div class=" align-items-center">
+          <!--<div class=" align-items-center">
             <button type="button" class="close col-1" aria-label="Close">
             <span aria-hidden="true">&times;</span>
-          </button></div>
+          </button></div>-->
         </div>
       </form>
     </header>
-    <hr>
-    <nav class=" navbar  navbar-expand d-flex flex-column align-item-start w-25 float-left" id="sidebar">
+    <hr  >
+    <!--<nav class=" navbar  navbar-expand d-flex flex-column align-item-start w-25 float-left" id="sidebar">
       <ul class= "navbar-nav d-flex mt-5 w-100 flex-column">
         <li class="nav-item active p-4 w-100"> 
           <a class="nav-link p-4" href="index.html">Porções</a>
@@ -41,10 +41,110 @@
           <a class="nav-link p-4" href="pratosLaCarte.html">Prato La Carte</a> 
         </li>
       </ul>
-    </nav>
+    </nav> -->
 
-    <section class="bg-success list-group">
-      <ul class="list-group">
+    <section class="w-75 justify-content-center text-center">
+      <table class="table table-striped ">
+        <thead>
+          <tr>
+            <h2 >Telhas</h2>
+          </tr>
+        </thead>
+
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Tamanho</th>
+            <th scope="col">Quantidade</th>
+          </tr>
+        </thead> 
+
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Telha Mista</td>
+            <td><select class="form-control" id="exampleFormControlSelect1">
+              <option>Inteira</option>
+              <option>Meia</option>
+            </select></td>
+            <td> <input type="number" id="id_qtd_telha" min="0"> </td>
+          </tr><tr>
+            <th scope="row">2</th>
+            <td>Telha Carreteira</td>
+            <td><select class="form-control" id="exampleFormControlSelect1">
+              <option>Inteira</option>
+              <option>Meia</option>
+            </select></td>
+            <td> <input type="number" id="id_qtd_telha " min="0"> </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Telha Tropeiro</td>
+            <td><select class="form-control" id="exampleFormControlSelect1">
+              <option>Inteira</option>
+              <option>Meia</option>
+            </select></td>
+            <td> <input type="number" id="id_qtd_telha " min="0"> </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table table-striped ">
+        <thead>
+          <tr>
+            <h2 >Pratos à La Carte</h2>
+          </tr>
+        </thead>
+
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Tamanho</th>
+            <th scope="col">Quantidade</th>
+          </tr>
+        </thead> 
+
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Picanha à Brasileira</td>
+            <td><select class="form-control" id="exampleFormControlSelect1">
+              <option>2 Pessoas</option>
+              <option>1 Pessoa</option>
+            </select></td>
+            <td> <input type="number" id="id_qtd_telha " min="0"> </td>
+          </tr><tr>
+            <th scope="row">2</th>
+            <td>Filé de Frango</td>
+            <td><select class="form-control" id="exampleFormControlSelect1" >
+              <option>2 Pessoas</option>
+              <option>1 Pessoa</option>
+            </select></td>
+            <td> <input type="number" id="id_qtd_telha " min="0"> </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Filé de Merluza</td>
+            <td><select class="form-control" id="exampleFormControlSelect1">
+              <option>2 Pessoas</option>
+              <option>1 Pessoa</option>
+            </select></td>
+            <td> <input type="number" id="id_qtd_telha " min="0"> </td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Omelete</td>
+            <td><select class="form-control" id="exampleFormControlSelect1">
+              <option>2 Pessoas</option>
+              <option>1 Pessoa</option>
+            </select></td>
+            <td> <input type="number" id="id_qtd_telha " min="0"> </td>
+          </tr>
+        </tbody>
+      </table>
+    <!--  <ul class="list-group">
         <li class="list-group-item">Arroz<img src="" href= ".html" title="" legend="" ></li>
         <li class="list-group-item"><img src = "" href= ".html" title="" ></li>
         <li class="list-group-item"><img src = "" href= ".html" title=""></li>
@@ -53,10 +153,10 @@
         <li class="list-group-item"><img src = "" href= ".html" title=""></li>
         <li class="list-group-item"><img src = "" href= ".html" title=""></li>
       </ul>
-
+      -->
     </section>
     <footer class="text-center">
-      <button class="btn btn-warning btn-lg m-3" id="bt_carrinho" >Adicionar ao carrinho</button>
+      <button class="btn btn-dark btn-lg m-3" id="bt_carrinho" >Adicionar ao carrinho</button>
     </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
