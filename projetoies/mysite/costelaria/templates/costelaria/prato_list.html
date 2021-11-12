@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Lista de pratos</h1>
+
+{% if prato_list %}
+  <ul>
+
+  {% for prato in prato_list %}
+    <li>
+      <a href="{{ prato.get_absolute_url }}">
+      {{ author }} ({{prato.date_of_birth}} - {% if prato.date_of_death %}{{prato.date_of_death}}{% endif %})
+      </a>
+    </li>
+  {% endfor %}
+
+ </ul>
+{% else %}
+  <p>There are no pratos available.</p>
+{% endif %}
+        
+        
+        
+{% endblock %}

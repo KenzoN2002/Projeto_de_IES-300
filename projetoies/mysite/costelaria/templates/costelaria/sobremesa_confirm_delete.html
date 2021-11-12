@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Deletar Prato</h1>
+
+<p>Quer mesmo excluir esta sobremesa?: {{ prato }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="Não" action="" value="Sim, deletar." />
+</form>
+
+{% endblock %}
