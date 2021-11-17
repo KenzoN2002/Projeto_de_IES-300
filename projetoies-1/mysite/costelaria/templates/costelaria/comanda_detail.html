@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>HOME</title>
+  </head>
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="bg-warning text-center p-3 m-2">
+  <h1 class="text-center">Mesa: {{ comanda.mesa }}</h1>
+</div>
+
+<div class="bg-light text-center w-50 mx-auto m-3">
+  <div class="p-2">
+    <h4><strong>Bebidas:</strong> {{ comanda.prato }}</h4>
+  </div>
+  <div class="p-2"><h4><strong>Bebidas:</strong> {{ comanda.bebida }}</h4></div> 
+  <div class="p-2"><h4><strong>Sobremesa:</strong> {{ comanda.sobremesa }}</h4></div>  
+</div>
+
+<div style="margin-left:20px;margin-top:20px" class="text-center">
+  <bottom type="button" class="btn btn-lg btn-primary"><h3>Atualizar</h3></bottom>
+  <bottom type="button" class="btn btn-lg"><h3>Encerrar</h3></bottom>
+
+  <dl>
+    {% for comanda in comanda.comanda_set.all %}
+      <dt><a href="{% url 'comanda-detail' comanda.pk %}">{{comanda}}</a> ({{comanda.comandainstance_set.all.count}})</dt>
+      <dd>{{comanda.summary}}</dd>
+    {% endfor %}
+  </dl>
+    
+</div>
+{% endblock %}

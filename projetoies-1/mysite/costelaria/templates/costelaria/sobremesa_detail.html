@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1 class="display-5 text-center bg-warning p-3 m-2">Sobremesa: {{ sobremesa }} </h1>
+<p class="text-center m-2">{{sobremesa.date_of_birth}} - {% if sobremesa.date_of_death %}{{sobremesa.date_of_death}}{% endif %}</p>
+
+<div style="margin-left:20px;margin-top:20px">
+  <h4>Sobremesas</h4>
+
+  <dl>
+  {% for comanda in sobremesa.comanda_set.all %}
+    <dt><a href="{% url 'comanda-detail' comanda.pk %}">{{comanda}}</a> ({{comanda.comandainstance_set.all.count}})</dt>
+    <dd>{{comanda.summary}}</dd>
+  {% endfor %}
+  </dl>
+
+</div>
+{% endblock %}

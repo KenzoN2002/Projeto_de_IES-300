@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1 class="display-5 text-center bg-warning p-3 m-2">Prato: {{ author }} </h1>
+<p class="text-center m-2">{{prato.date_of_birth}} - {% if prato.date_of_death %}{{prato.date_of_death}}{% endif %}</p>
+
+<div style="margin-left:20px;margin-top:20px">
+  <h4>Pratos</h4>
+
+  <dl>
+  {% for comanda in prato.comanda_set.all %}
+    <dt><a href="{% url 'comanda-detail' comanda.pk %}">{{book}}</a> ({{comanda.comandainstance_set.all.count}})</dt>
+    <dd>{{comanda.summary}}</dd>
+  {% endfor %}
+  </dl>
+
+</div>
+{% endblock %}

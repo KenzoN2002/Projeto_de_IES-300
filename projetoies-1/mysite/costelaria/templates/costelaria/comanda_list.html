@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>HOME</title>
+  </head>
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="bg-warning text-center p-3 m-2">
+  <h1 class="text-center">Lista de Comandas</h1>
+</div>
+{% if comanda_list %}
+  <ul>
+
+  {% for comanda in comanda_list %}
+    <li>
+      <a href="{{ comanda.get_absolute_url }}">
+      {{ comanda }} ({{comanda.date_of_birth}} - {% if comanda.date_of_death %}{{comanda.date_of_death}}{% endif %})
+      </a>
+    </li>
+  {% endfor %}
+
+ </ul>
+{% else %}
+  <h2>Nenhuma Comanda Cadastrada.</h2>
+{% endif %}
+        
+        
+        
+{% endblock %}

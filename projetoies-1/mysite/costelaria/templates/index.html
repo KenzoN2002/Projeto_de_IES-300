@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>HOME</title>
+  </head>
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <div>
+    <h1 class="display-5 text-center bg-warning p-3 m-2">HOME PORTAL SUL</h1>
+  </div>
+    <p>Bem-vindo a Costelaria Portal Sul <em>Desenvolvido em FATEC-SP</em>!</p>
+    <ul class="list-gorup p-2 mx-auto w-50 ">
+      <li class="list-group-item p-3 rounded border border-dark"><h3><strong>Comandas:</strong></h3> {{ num_comanda }}</li>
+      <li class="list-group-item p-3 rounded border border-dark"><h3><strong>Pratos:</strong></h3> {{ num_prato }}</li>
+      <li class="list-group-item p-3 rounded border border-dark"><h3><strong>Sobremesas:</strong></h3> {{ num_sobremesa }}</li>
+      <li class="list-group-item p-3 rounded border border-dark"><h3><strong>Bebidas:</strong></h3> {{ num_bebida }}</li>
+    </ul>
+{% endblock %}
