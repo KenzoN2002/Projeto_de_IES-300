@@ -10,7 +10,7 @@
   {% for comanda in comanda_list %}
     <li class="list-group-item list-group-item-action">
       <a href="{{ comanda.get_absolute_url }}" style="text-decoration:none">
-      {{ comanda }}
+      {{ comanda.mesa }}
       </a>
     </li>
   {% endfor %}
@@ -19,8 +19,8 @@
 {% else %}
   <h2>Nenhuma Comanda Cadastrada.</h2>
 {% endif %}
-
-<a href="http://127.0.0.1:8000/costelaria/comanda/create/"><bottom type="button" class="btn btn-md btn-align-center btn-primary m-5"><h3>Criar nova comanda!</h3></bottom></a>
-        
+<div class="text-center">
+  <a href="http://127.0.0.1:8000/costelaria/comanda/create/" class="text-center"><bottom type="button" class="btn btn-lg  mx-auto btn-align-center btn-primary m-5">Criar comanda!</bottom></a>
+</div>   
         
 {% endblock %}

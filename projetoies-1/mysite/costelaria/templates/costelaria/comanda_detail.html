@@ -5,17 +5,17 @@
   <h1 class="text-center">Mesa: {{ comanda.mesa }}</h1>
 </div>
 
-<div class="bg-light text-center w-50 mx-auto m-3">
-  <div class="p-2">
+<div class="bg-warning text-center w-50 mx-auto m-3">
+  <div class="p-3 rounded border border-dark">
     <h4><strong>Bebidas:</strong> {{ comanda.prato }}</h4>
   </div>
-  <div class="p-2"><h4><strong>Bebidas:</strong> {{ comanda.bebida }}</h4></div> 
-  <div class="p-2"><h4><strong>Sobremesa:</strong> {{ comanda.sobremesa }}</h4></div>  
+  <div class="p-3 rounded border border-dark"><h4><strong>Bebidas:</strong> {{ comanda.bebida }}</h4></div> 
+  <div class="p-3 rounded border border-dark"><h4><strong>Sobremesa:</strong> {{ comanda.sobremesa }}</h4></div>  
 </div>
 
 <div style="margin-left:20px;margin-top:20px" class="text-center">
-  <a href="comanda/<int:pk>/update/"><bottom type="button" class="btn btn-lg btn-primary"><h3>Atualizar</h3></bottom></a>
-  <a href="comanda/<int:pk>/delete/"><bottom type="button" class="btn btn-lg"><h3>Encerrar</h3></bottom></a>
+  <a href="comanda/<int:pk>/update/"><bottom type="button" class="btn btn-lg btn-warning"><h3>Atualizar</h3></bottom></a>
+  <a href="comanda/<int:pk>/delete/"><bottom type="button" class="btn btn-lg btn-warning"><h3>Encerrar</h3></bottom></a>
 
   <dl>
     {% for comanda in comanda.comanda_set.all %}

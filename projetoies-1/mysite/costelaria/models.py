@@ -30,7 +30,7 @@ class Sobremesa(models.Model):
     
 
 class Comanda(models.Model):
-    mesa = models.IntegerField(max_length=100, help_text='Digite o número da mesa')
+    mesa = models.IntegerField(max_length=100, help_text='Escolha o número da mesa')
     prato = models.ManyToManyField(Prato, help_text='Selecione o prato')
     bebida = models.ManyToManyField(Bebida, help_text='Selecione a bebida')
     sobremesa = models.ManyToManyField(Sobremesa, help_text='selecione a sobremesa')

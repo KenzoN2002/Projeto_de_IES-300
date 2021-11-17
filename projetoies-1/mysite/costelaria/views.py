@@ -6,7 +6,7 @@ from .models import Prato, Bebida, Sobremesa, Comanda
 
 
 def index(request):
-    num_comanda = ComandaInstance.objects.all().count()
+    num_comanda = ComandaInstance.objects.all()
     return render(
         request,
         'index.html',
@@ -16,7 +16,6 @@ def index(request):
 #Visualizações do Prato
 
 class PratoDetailView(generic.DetailView):
-    """Generic class-based detail view for an author."""
     model = Prato
 
 #Visualização de Sobremesa
