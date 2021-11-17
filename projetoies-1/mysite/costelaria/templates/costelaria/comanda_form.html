@@ -5,9 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-6">
             <form class="group-form bg-warning" action="" method="post">
+                <h1 class="text-center">Comanda</h1>
                 <div class="form-group text-center p-2 m-2">
                     {% csrf_token %}
-                    <table class="p-2">
+                    <table class="p-2 table">
                     {{ form.as_table }}
                     </table>
                     <input type="submit" value="Enviar" class="btn text center btn-lg btn-primary btn-align-center" />
