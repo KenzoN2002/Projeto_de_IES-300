@@ -35,7 +35,7 @@ class Comanda(models.Model):
     bebida = models.ManyToManyField(Bebida, help_text='Selecione a bebida')
     sobremesa = models.ManyToManyField(Sobremesa, help_text='selecione a sobremesa')
 
-    def __str__(self):
+    def __init__(self):
         return self.mesa
     
     def get_absolute_url(self):

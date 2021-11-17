@@ -3,12 +3,13 @@
 {% block content %}
 
 <h1 class="display-5 text-center bg-warning p-3 m-2">Deletar Comanda</h1>
-<div class="text-center bg-light">
-  <h3 class="text-center m-4">Confirma em deletar comanda?: {{ comanda }}?</h3>
+<div class="text-center bg-warning">
+  <h3 class="text-center m-4">Confirma em deletar comanda: {{ comanda.mesa }}?</h3>
 
   <form class="group-form" action="" method="POST" >
     {% csrf_token %}
-    <input type="submit" class="btn btn-lg btn-warning btn-align-center" action="" value="Sim." />
+    <input type="submit" class="btn btn-lg btn-warning btn-align-center btn-outline-dark" action="" value="Sim." />
+    <a href="http://127.0.0.1:8000/costelaria/comandas/"><bottom type="button" class="btn btn-md btn-align-center btn-warning m-5 btn-outline-dark"><h4>Não!</h4></bottom></a>
   </form>
 </div>
 {% endblock %}
