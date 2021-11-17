@@ -14,12 +14,6 @@
     <div class="row">
       <div class="col-sm-2">
       {% block sidebar %}
-        <ul class="sidebar-nav">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'pratos' %}">Todos os pratos</a></li>
-          <li><a href="">Todas as sobremesas</a></li>
-          <li><a href="">Todas as bebidas</a></li>
-        </ul>
      {% endblock %}
       </div>
       <div class="col-sm-10 ">{% block content %}{% endblock %}</div>
